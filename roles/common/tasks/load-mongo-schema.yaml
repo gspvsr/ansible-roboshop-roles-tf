@@ -1,0 +1,21 @@
+
+
+- name: SetUp Application
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: systemd-setup
+
+- name: Copy mongodb repo to yum.epos.d
+  ansible.builtin.copy:
+    src: mongodb.repo
+    dest: /etc/yum.repos.d/mongo.repo
+
+- name: Install MongoDB
+  ansible.builtin.dnf:
+    name: mongodb-org-shell
+    state: installed
+
+- name: load {{component}} data
+  ansible.builtin.shell: mongo --host mongodb.gspaws.online < /app/schema/{{component}}.js
+
+

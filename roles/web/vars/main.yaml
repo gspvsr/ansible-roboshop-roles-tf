@@ -1,0 +1,5 @@
+CATALOGUE_HOST: catalogue.gspaws.online
+USER_HOST: user.gspaws.online
+SHIPPING_HOST: shipping.gspaws.online
+CART_HOST: cart.gspaws.online
+PAYMENT_HOST: payment.gspaws.online
