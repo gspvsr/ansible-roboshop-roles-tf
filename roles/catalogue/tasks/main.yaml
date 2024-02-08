@@ -3,7 +3,7 @@
 # common is also another role
 # I need to import a task nodejs.yaml in catalogue
 
-- name: print app app_version
+- name: print app app version
   debug:
     msg: "APP version is: {{app_version}}"
 
