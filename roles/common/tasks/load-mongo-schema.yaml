@@ -16,6 +16,6 @@
     state: installed
 
 - name: load {{component}} data
-  ansible.builtin.shell: mongo --host mongodb.gspaws.online < /app/schema/{{component}}.js
+  ansible.builtin.shell: mongo --host mongodb-dev.gspaws.online < /app/schema/{{component}}.js
 
 
